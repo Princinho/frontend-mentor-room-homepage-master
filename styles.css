@@ -1,0 +1,127 @@
+:root {
+    /* - Dark Gray: hsl(0, 0%, 63%)
+- Black: hsl(0, 0%, 0%)
+- White: hsl(0, 0%, 100%)
+- Very Dark Gray: hsl(0, 0%, 27%) */
+    --clr-dark-gray: hsl(0, 0%, 63%);
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-very-dark-gray: hsl(0, 0%, 27%);
+}
+
+* {
+    font-family: 'League Spartan', sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all 1 s;
+}
+
+p {
+    font-size: 12px;
+}
+
+img {
+    width: 100%;
+}
+
+.btn-open-menu {
+    border: none;
+    background: none;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+nav {
+    display: none;
+}
+
+.slideshow {
+    position: relative;
+    min-height: 100vh;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    right: 100%;
+}
+
+.slide__image {
+    height: 50vh;
+}
+
+.slide__image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide__description {
+    padding: 2rem;
+    padding-top: 3rem;
+    
+}
+
+.slide__description>h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.slide__description p, 
+.about__text p{
+    color: var(--clr-dark-gray);
+    line-height: 1.5;
+    letter-spacing: 1.1px;
+    font-size: 500;
+    margin-bottom: 2em;
+}
+.slide__description a{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-block: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-very-dark-gray);
+    font-size: 1.1em;
+    letter-spacing: .4em;
+}
+.slide__description a>img{
+    width: 3em;
+}
+.slide.viewed {
+    left: 100%;
+}
+
+.slide.active {
+    position: static;
+}
+
+.slideshow__actions {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 50vh;
+}
+
+.slideshow__action {
+    border: none;
+    background-color: var(--clr-black);
+    padding-inline: 1.5rem;
+    padding-block: .8rem;
+}
+.about__text{
+
+    margin-inline: 2em;
+}
+
+.about__text h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .2em;
+    margin-top: 2rem;
+    margin-bottom: 1em;
+}
+.about__text p{
+}
