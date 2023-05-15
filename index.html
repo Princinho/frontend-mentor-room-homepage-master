@@ -27,40 +27,54 @@
 
 <body>
   <main>
-    <button class="btn-open-menu" title="Open menu"><img src="images/icon-hamburger.svg" alt="Hamburger icon"></button>
+    <button type="button" id="btn-open-nav" class="btn-open-menu" title="Open menu" aria-label="Open menu">
+      <img src="images/icon-hamburger.svg" alt="" aria-hidden="true">
+    </button>
     <nav>
-      <ul>
-        <li>Home</li>
-        <li>Shop</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+      <div class="nav-content">
+        <button type="button" id="btn-close-nav" aria-label="close menu">
+          <img src="images/icon-close.svg" alt="" aria-hidden="true">
+        </button>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>Shop</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+
     </nav>
     <div class="wrapper">
 
       <section class="slideshow">
-        <div class="slide viewed">
+        <div class="slide active">
           <div class="slide__image">
-            <img src="images/mobile-image-hero-1.jpg" alt="hero image">
+            <!-- <img src="images/mobile-image-hero-1.jpg" alt="hero image"> -->
+            <!-- <img src="images/desktop-image-hero-1.jpg" class="hidden-mobile" alt="hero image"> -->
+            <img srcset="images/mobile-image-hero-1.jpg 375w, images/desktop-image-hero-1.jpg 840w" sizes="(max-width: 700px) 480px,
+         800px" src="images/desktop-image-hero-1.jpg" alt="Elva dressed as a fairy" />
           </div>
           <div class="slide__description">
             <h1>Discover innovative ways to decorate</h1>
             <p> We provide unmatched quality, comfort, and style for property owners across the country.
               Our experts combine form and function in bringing your vision to life. Create a room in your
               own style with our collection and make your property a reflection of you and what you love.</p>
-              <a href="#"> Shop now <img src="images/icon-arrow.svg" aria-hidden="true" alt=""/></a>
+            <a href="#" class="slide__cta"> Shop now <img src="images/icon-arrow.svg" aria-hidden="true" alt="" /></a>
           </div>
         </div>
-        <div class="slide active">
+        <div class="slide">
           <div class="slide__image">
             <img src="images/mobile-image-hero-2.jpg" alt="hero image">
+            <img srcset="images/mobile-image-hero-2.jpg 375w, images/desktop-image-hero-1.jpg 840w"
+              sizes="(max-width: 700px) 480px,800px" src="images/desktop-image-hero-1.jpg"
+              alt="A yellow, a green and a pink chair in a cement colored room">
           </div>
           <div class="slide__description">
             <h1>We are available all across the globe</h1>
             <p> With stores all over the world, it's easy for you to find furniture for your home or place of business.
               Locally, we're in most major cities throughout the country. Find the branch nearest you using our
               store locator. Any questions? Don't hesitate to contact us today.</p>
-            <a href="#"> Shop now <img src="images/icon-arrow.svg" aria-hidden="true" alt=""/></a>
+            <a href="#" class="slide__cta"> Shop now <img src="images/icon-arrow.svg" aria-hidden="true" alt="" /></a>
           </div>
         </div>
         <div class="slide">
@@ -74,20 +88,22 @@
               to ensure that every product is made as perfect and as consistent as possible. With three decades of
               experience in this industry, we understand what customers want for their home and office.
             </p>
-            <a href="#"> Shop now <img src="images/icon-arrow.svg" aria-hidden="true" alt=""/></a>
+            <a href="#" class="slide__cta"> Shop now <img src="images/icon-arrow.svg" aria-hidden="true" alt="" /></a>
           </div>
         </div>
         <div class="slideshow__actions">
-          <button class="slideshow__action slideshow__action--prev" title="Previous Slide" aria-label="Previous Slide">
+          <button id="previous_slide" class="slideshow__action slideshow__action--prev" title="Previous Slide"
+            aria-label="Previous Slide">
             <img src="images/icon-angle-left.svg" alt="Left arrow icon">
           </button>
-          <button class="slideshow__action slideshow__action--next" aria-label="Next Slide" title="Next Slide">
+          <button id="next_slide" class="slideshow__action slideshow__action--next" aria-label="Next Slide"
+            title="Next Slide">
             <img src="images/icon-angle-right.svg" alt="Right arrow icon">
           </button>
         </div>
       </section>
       <section class="about">
-        <div class="about__left-image">
+        <div class="about__image about__image-left">
           <img src="images/image-about-dark.jpg" alt="A low table with two chairs in a low light bedroom" />
         </div>
         <div class="about__text">
@@ -97,7 +113,7 @@
             inspires you. Find the furniture pieces you need, from traditional to contemporary styles
             or anything in between. Product specialists are available to help you create your dream space.</p>
         </div>
-        <div class="about__right-image">
+        <div class="about__image about__image-right">
           <img src="images/image-about-light.jpg"
             alt="A beautiful white chair in a white room with a nice amount of sunlight coming in through the window" />
         </div>
@@ -119,6 +135,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Gatien GNAKOU-EDJAMBO</a>.
   </div>
+  <script defer src="scripts.js"></script>
 </body>
 
 </html>
