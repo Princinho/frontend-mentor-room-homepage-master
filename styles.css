@@ -227,9 +227,7 @@ nav.open {
 }
 
 @media (min-width:800px) {
-    p {
-        font-size: 1rem;
-    }
+    
 
     .hidden-desktop {
         visibility: hidden;
@@ -271,7 +269,9 @@ nav.open {
         right: auto;
         top: auto;
         min-width: 10%;
-        align-items: center;
+        align-items: stretch;
+        min-height: 4rem;
+        
     }
 
     .about {
